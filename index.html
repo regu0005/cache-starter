@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caching Files</title>
+    <!-- add custom web fonts here -->
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <script type="module" src="./js/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CACHE API</h1>
+    </header>
+    <main>
+      <section class="data_entry">
+        <!--
+        Enter items one at a time with SAVE ITEM button.
+        Saving an item clears the input.
+        Display each item in a ul, as it is added.
+        Clicking SAVE LIST button will create a file and save it in the cache.
+        Saving the file clears the list.
+      -->
+        <h2>Add Items to the Current List</h2>
+        <p>Enter the items for your list.</p>
+        <form action="#" id="itemForm">
+          <p>
+            <label for="gItem">SOME KIND OF ITEM</label>
+            <input type="text" id="gItem" name="gItem" autofocus />
+          </p>
+          <p>
+            <button id="btnItem">Save Item</button>
+            <button id="btnList">Save List</button>
+          </p>
+        </form>
+        <h2>The Current List</h2>
+        <p>This is the list of the current items.</p>
+        <ul id="item_list">
+          <li>No Items currently.</li>
+        </ul>
+      </section>
+      <section class="data_files">
+        <!-- 
+        Display a list of file names with time and date they were saved. 
+        Click on file name to display its contents in data_display area
+      -->
+        <h2>File List</h2>
+        <p>
+          This is a list of all the files currently available in the cache. Click on a file name to load the data from
+          that file. Click on the DELETE button to remove the file from the cache.
+        </p>
+        <ul id="file_list">
+          <li>No Files currently.</li>
+        </ul>
+      </section>
+      <section class="data_display">
+        <!-- Contents of a saved file displayed here -->
+        <h2>File Contents <span></span></h2>
+        <p>Select a File from the list above.</p>
+        <pre><code id="content">Empty</code></pre>
+      </section>
+    </main>
+  </body>
+</html>
